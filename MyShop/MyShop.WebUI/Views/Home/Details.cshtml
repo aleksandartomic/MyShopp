@@ -1,7 +1,7 @@
 ﻿@model MyShop.Core.Models.Product
 
 @{
-    ViewBag.Title = Model.Name +"Details";
+    ViewBag.Title = Model.Name + "Details";
 }
 
 <h2>@Html.DisplayFor(model => model.Name)</h2>
@@ -31,7 +31,7 @@
             </dd>
 
             <dt></dt>
-            <dd><a herf="#" class="btn btn-default ">Add to Basket</a></dd>
+            <dd><a href="@Url.Action("AddToBasket", "Basket", new { Id=Model.Id })" class="btn btn-default">Add To Basket</a></dd>
 
             <dt></dt>
             <dd>@Html.ActionLink("Back to List", "Index")</dd>

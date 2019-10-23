@@ -134,7 +134,7 @@ namespace MyShop.Services
 
         public BasketSummaryViewModel GetBasketSummary(HttpContextBase httpContext)
         {
-            Basket basket = new Basket();
+            Basket basket = GetBasket(httpContext, false);
             BasketSummaryViewModel model = new BasketSummaryViewModel(0, 0);
             if (basket != null)
             {
